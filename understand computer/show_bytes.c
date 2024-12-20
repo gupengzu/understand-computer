@@ -37,7 +37,7 @@ void replace_swap(int *x, int *y)
 void X_change(int* x)
 {
     *x = *x & 0xFF;
-   // *x = *x | (~0 << 8); // 使用无符号整数常量 0U 代替 0
+    *x = *x | (~0 << 8); // 使用无符号整数常量 0U 代替 0
     printf("%d", *x);
 }
 
@@ -46,13 +46,13 @@ int main()
     //char* s = "ABCEDF";
     //show_bytes((byte_pointer)s, strlen(s) + 1);
 
-    //int a = 10;
-    //int b = 20;
-    //int* swap1 = &a;
-    //int* swap2 = &b;
-    //replace_swap(swap1, swap2);
-    //printf("%d ", a);
-    //printf("%d \n", b); // 应看到 a 和 b 的值交换了
+    int a = 10;
+    int b = 20;
+    int* swap1 = &a;
+    int* swap2 = &b;
+    replace_swap(swap1, swap2);
+    printf("%d ", a);
+    printf("%d \n", b); // 应看到 a 和 b 的值交换了
 
     //int c = 100045;
     //X_change(&c);
